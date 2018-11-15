@@ -5,7 +5,7 @@
 
 
 //creo la lista dei miei cognomi
-var lista = ['Baldi ', 'Papagni ', 'Forgheri ', 'Boolean '];
+var lista = ['Baldi', 'Papagni', 'Forgheri', 'Boolean'];
 console.log(lista);
 //chiedo all'utente il suo cognome
 var cognome_utente = 'Careers';
@@ -19,16 +19,18 @@ console.log(lista);
 //stampo la lista
 document.getElementById('lista_alfabetica').innerHTML = lista;
 //trovo a che posizione della lista il nuovo utente si trova
-// for(i = 0; i < lista.length; i++);
+// for(var i = 0; i < lista.length; i++);
 var cognome_trovato = false;
 var contatore = 0;
 while (!cognome_trovato && contatore < lista.length) {
   if (lista[contatore] == cognome_utente) {
     cognome_trovato = true;
+    document.getElementById('posizione_utente').innerHTML = 'Nella lista, secondo l\'ordine alfabetico, ti trovi al n ' + (contatore + 1);
   }
   contatore++;
 }
 console.log(cognome_trovato);
-var posizione = lista.indexOf(cognome_utente);
-console.log(posizione);
-document.getElementById('posizione_utente').innerHTML = 'Nella lista, secondo all\'ordine alfabetico, ti trovi al n ' + posizione;
+// se non volessi usare il while
+// var posizione = lista.indexOf(cognome_utente);
+// console.log(posizione);
+// document.getElementById('posizione_utente').innerHTML = 'Nella lista, secondo all\'ordine alfabetico, ti trovi al n ' + posizione;
