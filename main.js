@@ -29,3 +29,6 @@ while (!cognome_trovato && contatore < lista.length) {
   contatore++;
 }
 console.log(cognome_trovato);
+var posizione = lista.indexOf(cognome_utente);
+console.log(posizione);
+document.getElementById('posizione_utente').innerHTML = 'Nella lista, secondo all\'ordine alfabetico, ti trovi al n ' + posizione;
